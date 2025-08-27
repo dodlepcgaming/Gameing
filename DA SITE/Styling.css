@@ -38,3 +38,17 @@ p, h1, h2 {
     color: #bec2d6;
     text-align: start;
 }
+
+.EVIL {
+    position: fixed;
+    bottom: 3%;
+    right: 3%;
+    border-radius: 15px;
+    padding: 2px;
+
+    background: 
+        linear-gradient(to bottom, #850b0b, #000) border-box,
+        white padding-box;
+
+    border: 2px solid transparent;
+}
