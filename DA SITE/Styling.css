@@ -1,0 +1,40 @@
+.Cars {
+    position: center;
+    border-radius: 15px;
+    padding: 2px;
+
+    background: 
+        linear-gradient(to bottom, #b5c3ff, #000) border-box,
+        white padding-box;
+
+    border: 5px solid transparent;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+}
+
+html {
+    background-image: url(images/Tiled.jpeg);
+    background-repeat: repeat;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 10px 16px;
+  background-image: url(images/Forheader.jpg);
+  background-position: center;
+  color: #f1f1f1;
+  text-align: center;
+}
+
+p, h1, h2 {
+    color: #ffffff;
+    text-align: center;
+}
+
+.listofcars, li {
+    color: #bec2d6;
+    text-align: start;
+}
