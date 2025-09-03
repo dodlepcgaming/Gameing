@@ -3,16 +3,46 @@
     <head>
         <title>Marks Epic Website</title>
         <div class="header" id="myHeader">
-            <h2>I LOVE CARS YAY!</h2>
+            <h2 id="sharter">I LOVE CARS YAY!</h2>
         </div>
     </head>
 
     <body>
+        <script>
+            function showShartAlert() {
+                alert('Page will now be sharted!');
+            }
+
+            function TextSharter() {
+                document.getElementById("sharter").innerHTML = "SHARTED!";
+            }
+
+            function TextSharter2() {
+                const allElements = document.body.querySelectorAll("*");
+                allElements.forEach(function(el) {
+                    if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3) {
+                        el.textContent = "SHARTED!";
+                        el.style.color = "#4e3505";
+                    }
+                });
+            }
+
+            function myFunction(elem) {
+                elem.innerHTML = "hello world";
+            }
+        </script>
+        
         <a href="dasite.html"><img class="EVIL" src="images/THECREATOR.jpg" style="max-width: 5%; height: auto;" alt="image of Mark in a very dark room smiling"></a>
+        <div class="shart">
+            <button class="button1" onclick="TextSharter(); showShartAlert(); TextSharter2();">Shart!?!</button>
+        </div>
+        <div class="fun">
+            <button class="button2" onclick="myFunction(this);">Click me!</button>
+        </div>
         <link rel="stylesheet" href="Styling.css">
-        <h1>This is my epic website lmao</h1>
-        <p>I really like electronics and cars so you can guess what this website will be about!</p>
-        <h2>Below are some cars that I enjoy very much!</h2>
+        <h1 id="sharter">This is my epic website lmao</h1>
+        <p id="sharter">I really like electronics and cars so you can guess what this website will be about!</p>
+        <h2 id="sharter">Below are some cars that I enjoy very much!</h2>
             <img class="Cars" src="images/LexusIS350.jpeg" style="max-width: 100%; height: auto;" alt="Lexus IS350 luxury sport sedan">
         <br><br>
             <img class="Cars" src="images/MazdaRX8.jpeg" style="max-width: 100%; height: auto;" alt="Mazda RX8 sport coupe">
@@ -20,13 +50,14 @@
             <img class="Cars" src="images/InfinitiG35.jpg" style="max-width: 100%; height: auto;" alt="Infiniti G35 luxury sport coupe">
         <br><br>
             <img class="Cars" src="images/CadillacCT5Blackwing.jpeg" style="max-width: 100%; height: auto;" alt="Cadillac CT5 Blackwing luxury sport sedan">
-        <p class="listofcars">Below is a ordered list of the cars that have been showed!</p>
+        <p id="sharter" class="listofcars">Below is a ordered list of the cars that have been showed!</p>
         <ul>
             <li>Lexus IS350</li>
             <li>Mazda RX8</li>
             <li>Infiniti G35</li>
             <li>Cadillac CT5 Blackwing</li>
         </ul>
+        
         <a href="https://hiconsumption.com/motors/best-tuner-cars/">A list of awesome tuner cars!</a>
         <br>
         <a href="dasidesite.html">Tell me what cars you liked!</a>

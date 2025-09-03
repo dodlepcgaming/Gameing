@@ -52,3 +52,51 @@ p, h1, h2, label{
 
     border: 2px solid transparent;
 }
+
+.shart {
+    position: fixed;
+    top: 20%;
+    left: 3%;
+    border-radius: 15px;
+    padding: 2px;
+    z-index: 1001;
+
+    background: 
+        linear-gradient(to bottom, #7c4d07, #000) border-box,
+        white padding-box;
+
+    border: 2px solid transparent;
+}
+
+.fun {
+    position: fixed;
+    top: 24%;
+    left: 3%;
+    border-radius: 15px;
+    padding: 2px;
+    z-index: 1001;
+
+    background: 
+        linear-gradient(to bottom, #868686, #000) border-box,
+        white padding-box;
+
+    border: 2px solid transparent;
+}
+
+button {
+    background:none;
+    border:none;
+    color: #888888;
+}
+
+button:hover {
+    background:none;
+    border:none;
+    color: #ffffff;
+}
+
+button:active {
+    background:none;
+    border:none;
+    color: #888888;
+}

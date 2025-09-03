@@ -22,13 +22,28 @@
         <p>Give me your information please :D</p>
         <form action="dasidesite.html">
             <label for="fname">First name:</label>
-                <input type="text" id="fname" name="fname" required><br><br>
+            <input type="text" id="fname" name="fname" required onblur="validateRequired(this, 'fnameError')"><br>
+            <span id="fnameError" style="color:red; display:none;">I REQUIRE THIS INFORMATION!</span><br><br>
+
             <label for="lname">Last name:</label>
-                <input type="text" id="lname" name="lname" required><br><br>
-            <label for="lname">Favorite car:</label>
-                <input type="text" id="car" name="car"><br><br>
+            <input type="text" id="lname" name="lname" required onblur="validateRequired(this, 'lnameError')"><br>
+            <span id="lnameError" style="color:red; display:none;">I REQUIRE THIS INFORMATION!</span><br><br>
+
+            <label for="car">Favorite car:</label>
+            <input type="text" id="car" name="car"><br><br>
             <input type="submit" value="Submit">
         </form> 
+
+        <script>
+            function validateRequired(field, errorId) {
+                var errorSpan = document.getElementById(errorId);
+                if (field.value.trim() === "") {
+                    errorSpan.style.display = "inline";
+                } else {
+                    errorSpan.style.display = "none";
+                }
+            }
+        </script>
         <a href="https://hiconsumption.com/motors/best-tuner-cars/">A list of awesome tuner cars!</a>
     </body>
 </html>
