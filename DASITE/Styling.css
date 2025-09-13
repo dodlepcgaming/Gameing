@@ -83,6 +83,21 @@ p, h1, h2, label{
     border: 2px solid transparent;
 }
 
+.fun2 {
+    position: fixed;
+    top: 28%;
+    left: 3%;
+    border-radius: 15px;
+    padding: 2px;
+    z-index: 1001;
+
+    background: 
+        linear-gradient(to bottom, #868686, #000) border-box,
+        white padding-box;
+
+    border: 2px solid transparent;
+}
+
 button {
     background:none;
     border:none;

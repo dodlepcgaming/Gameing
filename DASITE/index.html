@@ -2,10 +2,11 @@
 <html lang="en">
     <head>
         <title>Marks Epic Website</title>
-            <h2 class="header" id="myHeader">DO YOU LIKE CARS?</h2>
+        <link rel="stylesheet" href="Styling.css">
     </head>
 
     <body>
+        <h2 class="header" id="myHeader">DO YOU LIKE CARS?</h2>
         <script>
             function showShartAlert() {
                 alert('Page will now be sharted!');
@@ -28,16 +29,30 @@
             function myFunction(elem) {
                 elem.innerHTML = "hello world";
             }
+
+            function fetchInfo() {
+                let file = "TextDoc.txt"
+
+                fetch (file)
+                .then(x => x.text())
+                .then(y => document.getElementById("Fetch").textContent = y);
+            }
         </script>
         
         <a href="dasite.html"><img class="EVIL" src="images/THECREATOR.jpg" style="max-width: 5%; height: auto;" alt="image of Mark in a very dark room smiling"></a>
+
         <div class="shart">
             <button class="button1" onclick="TextSharter(); showShartAlert(); TextSharter2();">Shart!?!</button>
         </div>
+
         <div class="fun">
             <button class="button2" onclick="myFunction(this);">Click me!</button>
         </div>
-        <link rel="stylesheet" href="Styling.css">
+
+        <div class="fun2">
+            <button id="Fetch" class="button1" onclick="fetchInfo();">Fetch!</button>
+        </div>
+
         <h1 id="sharter">This is my epic website lmao</h1>
         <p id="sharter">I really like electronics and cars so you can guess what this website will be about!</p>
         <h2 id="sharter">Below are some cars that I enjoy very much!</h2>
