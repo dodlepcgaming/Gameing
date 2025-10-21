@@ -1,8 +1,8 @@
 <?php
 $server = "localhost";
 $username = "php";
-$password = "password"; // Replace with your actual password
-$database = "mydb";     // Replace with your actual DB name
+$password = "password";
+$database = "mydb";
 
 $conn = mysqli_connect($server, $username, $password, $database);
 
@@ -14,6 +14,9 @@ $filter = "";
 if (!empty($_GET['fname'])) {
     $fname = mysqli_real_escape_string($conn, $_GET['fname']);
     $filter = "WHERE client_FN LIKE '%$fname%'";
+} elseif (!empty($_GET['car'])) {
+    $car = mysqli_real_escape_string($conn, $_GET['car']);
+    $filter = "WHERE client_car LIKE '%$car%'";
 }
 
 $sql = "SELECT * FROM client_car $filter;";
@@ -24,16 +27,20 @@ $result = mysqli_query($conn, $sql);
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Submitted Car Data</title>
+    <title>Client Car Database</title>
     <link rel="stylesheet" href="Styling.css">
 </head>
 <body>
-    <h2 class="header">Submitted Car Information</h2>
+    <h2 class="header">Client Car Records</h2>
 
     <div style="text-align:center;">
         <form method="GET" style="margin:20px auto;">
-            <label for="fname" style="color:white;">Filter by first name:</label>
-            <input type="text" name="fname" id="fname" placeholder="Enter first name" style="border-radius:5px; padding:5px;">
+            <label for="fname" style="color:white;">Filter by First Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="Enter name" style="border-radius:5px; padding:5px;">
+            <br><br>
+            <label for="car" style="color:white;">Filter by Car:</label>
+            <input type="text" id="car" name="car" placeholder="Enter car" style="border-radius:5px; padding:5px;">
+            <br><br>
             <input type="submit" value="Search" style="border-radius:5px; padding:5px;">
         </form>
 
