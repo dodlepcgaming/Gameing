@@ -1,5 +1,5 @@
 <?php
-$server = "localhost";
+$server = "markraspi5";
 $username = "php";
 $password = "password";
 $database = "ClientList";
@@ -18,6 +18,15 @@ $sql = "INSERT INTO client_car (client_FN, client_LN, client_car)
         VALUES ('$fname', '$lname', '$car');";
 
 $result = mysqli_query($conn, $sql);
+
+if ($result) {
+    $new_id = mysqli_insert_id($conn);
+    echo "<p style='color:lime;'>Success! Your data was added to the database.</p>";
+    echo "<p style='color:white;'>Your assigned ID is: <b>$new_id</b></p>";
+} else {
+    echo "<p style='color:red;'>Error: " . mysqli_error($conn) . "</p>";
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -43,6 +52,7 @@ $result = mysqli_query($conn, $sql);
         <a href="dasidesite.html" style="color:cyan;">← Back to Form</a>
         <br><br>
         <a href="displaydata.php" style="color:lightgray;">View Submitted Entries →</a>
+        <a href="index.html"><img class="EVIL" src="images/THECREATOR.jpg" style="max-width: 5%; height: auto;" alt="image of Mark in a very dark room smiling"></a>
     </div>
 </body>
 </html>

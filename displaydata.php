@@ -1,8 +1,8 @@
 <?php
-$server = "localhost";
+$server = "markraspi5";
 $username = "php";
 $password = "password";
-$database = "mydb";
+$database = "ClientList";
 
 $conn = mysqli_connect($server, $username, $password, $database);
 
@@ -19,7 +19,7 @@ if (!empty($_GET['fname'])) {
     $filter = "WHERE client_car LIKE '%$car%'";
 }
 
-$sql = "SELECT * FROM client_car $filter;";
+$sql = "SELECT id, client_FN, client_LN, client_car FROM client_car $filter ORDER BY id DESC;";
 $result = mysqli_query($conn, $sql);
 ?>
 
@@ -56,7 +56,7 @@ $result = mysqli_query($conn, $sql);
 
             while ($row = mysqli_fetch_assoc($result)) {
                 echo "<tr>
-                        <td style='border:1px solid #999; padding:8px;'>{$row['client_number']}</td>
+                        <td style='border:1px solid #999; padding:8px; color:#a3b9ff; font-weight:bold;'>{$row['id']}</td>
                         <td style='border:1px solid #999; padding:8px;'>{$row['client_FN']}</td>
                         <td style='border:1px solid #999; padding:8px;'>{$row['client_LN']}</td>
                         <td style='border:1px solid #999; padding:8px;'>{$row['client_car']}</td>
@@ -74,7 +74,7 @@ $result = mysqli_query($conn, $sql);
         <br>
         <a href="dasidesite.html" style="color:cyan;">← Back to Form</a>
         <br><br>
-        <a href="index.html" style="color:lightgray;">🏠 Return to Home</a>
+        <a href="index.html"><img class="EVIL" src="images/THECREATOR.jpg" style="max-width: 5%; height: auto;" alt="image of Mark in a very dark room smiling"></a>
     </div>
 </body>
 </html>
