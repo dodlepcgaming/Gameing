@@ -53,6 +53,7 @@ if ($result) {
         <br><br>
         <a href="displaydata.php" style="color:lightgray;">View Submitted Entries →</a>
         <a href="index.html"><img class="EVIL" src="images/THECREATOR.jpg" style="max-width: 5%; height: auto;" alt="image of Mark in a very dark room smiling"></a>
+        <a href="displaydata.php"><img class="EVILER" src="images/THECREATOR.jpg" style="max-width: 5%; height: auto;" alt="image of Mark in a very dark room smiling"></a>
     </div>
 </body>
 </html>

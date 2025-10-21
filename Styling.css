@@ -53,6 +53,20 @@ p, h1, h2, label{
     border: 2px solid transparent;
 }
 
+.EVILER {
+    position: fixed;
+    bottom: 3%;
+    right: 6%;
+    border-radius: 15px;
+    padding: 2px;
+
+    background: 
+        linear-gradient(to bottom, #0b851f, #ffffff) border-box,
+        white padding-box;
+
+    border: 2px solid transparent;
+}
+
 .shart {
     position: fixed;
     top: 20%;

@@ -75,6 +75,7 @@ $result = mysqli_query($conn, $sql);
         <a href="dasidesite.html" style="color:cyan;">← Back to Form</a>
         <br><br>
         <a href="index.html"><img class="EVIL" src="images/THECREATOR.jpg" style="max-width: 5%; height: auto;" alt="image of Mark in a very dark room smiling"></a>
+        <a href="displaydata.php"><img class="EVILER" src="images/THECREATOR.jpg" style="max-width: 5%; height: auto;" alt="image of Mark in a very dark room smiling"></a>
     </div>
 </body>
 </html>
