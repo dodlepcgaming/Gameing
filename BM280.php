@@ -15,7 +15,7 @@
 <body>
 
     <div class="container">
-        <h1>BME280 Weather Station Data 🌤️</h1>
+        <h1>BME280 Weather Station Data</h1>
 
         <form method="post">
             <button type="submit" name="read_data">Refresh Readings</button>
@@ -26,7 +26,7 @@
         if (isset($_POST['read_data'])) {
             // 1. Execute the BME280 binary and capture its JSON output
             // Assumes the binary is in the same directory and is executable
-            $raw_json = `./bme280`; 
+            $raw_json = `./home/mark/Desktop/BM280/raspberry-pi-bme280/bme280`; 
 
             // 2. Decode the JSON string into an associative array
             $data = json_decode($raw_json, true);
