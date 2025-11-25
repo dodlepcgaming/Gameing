@@ -3,12 +3,12 @@
 shell_exec("gpio mode 7 out");
 
 // Read current LED state
-$currentState = trim(shell_exec("gpio read 7"));
+$currentState = (shell_exec("gpio read 7"));
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['toggle'])) {
         shell_exec("gpio toggle 7");
-        $currentState = trim(shell_exec("gpio read 7"));
+        $currentState = (shell_exec("gpio read 7"));
     }
     if (isset($_POST['button'])) {
         if ($currentState == "1") {
@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             shell_exec("gpio write 7 1"); // turn ON
         }
-        $currentState = trim(shell_exec("gpio read 7"));
+        $currentState = (shell_exec("gpio read 7"));
     }
 }
 
