@@ -1,5 +1,4 @@
 <?php
-<?php
 $raw_json = `/home/mark/Desktop/BM280/raspberry-pi-bme280/bme280`;
 $data = json_decode($raw_json, true);
 
@@ -14,3 +13,4 @@ if ($data !== null && is_array($data)) {
         "error" => "Failed to read sensor data or decode JSON."
     ]);
 }
+?>
